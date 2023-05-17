@@ -1,9 +1,10 @@
-import {Title} from "./styles"
+import {Container, Title} from "./styles"
 
 export default function Home(){
    return(
-   <div>
+   <Container>
       <Title>Home</Title>
-     </div>
+      
+     </Container>
    );
 }

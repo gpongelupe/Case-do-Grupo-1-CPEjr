@@ -2,16 +2,16 @@ import styled from "styled-components";
 import fundoMinecraft from "../../assets/editar/fundoMinecraft.jpg"
 
 export const Container = styled.div`
-background-position: center;
-  //background-repeat: no-repeat;
-  height: 100vh;
-  width: 100vw;
-  display:flex;
-  flex-direction: column;
-  overflow: auto;
-background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
+    position:fixed;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
     url(${fundoMinecraft});
- // background-size: cover;
+    background-size: cover;
 `;
 
 export const Title = styled.p`

@@ -5,8 +5,7 @@ font-size: 50px;
 `;
 export const Container = styled.div`
 display:flex;
-flex-direction: column;
-background-color: azure;
+justify-content: center;
 height: 100%;
 width:100%;
 `;

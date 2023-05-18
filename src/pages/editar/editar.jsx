@@ -1,13 +1,9 @@
-//import { text } from "stream/consumers";
-import {Container, Title, Wrapper} from "./styles"
+import {Container, Title} from "./styles"
 
 export default function Editar(){
-   return(
-      
+   return(     
       <Container>
       <Title>O que deseja editar?</Title>  
-      </Container> 
-
-        
+      </Container>   
    );
 }

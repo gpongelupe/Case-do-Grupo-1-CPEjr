@@ -2,28 +2,22 @@ import styled from "styled-components";
 import ImgHamburguer from "../../assets/editar/menuhamburguer.png"
 
 
+
+
 export const H1 = styled.header`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30%;
-  padding-left: 15px;
-  min-height: 80px;
+  height: 80px;
+  width: 100%;
   color: white;
   background: #567838;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+  gap: 15%;
  
 
-    @media (max-width: 1300px) {
-    gap: 20%;
-    text-align: center; 
-  }  
-
-  @media (max-width: 950px) {
-    gap: 10%;
-    text-align: center; 
-  } 
   @media (max-width: 750px) {
     grid-template-columns: repeat(2, 1fr);
-    gap: 5%
+    gap: 50%;
   }
 
 
@@ -33,15 +27,11 @@ export const Item = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
-
+  font-size: 20px;
+  letter-spacing: 2px;
   img {
     width: 65px;
-    }
-
-    font-size: 20px;
-    letter-spacing: 2px;
-    
+    }  
 `;
 
 export const Links = styled.div`
@@ -67,36 +57,40 @@ export const Botao = styled.div`
   justify-content: center;
   
   button {
-     font-family: "minecraft"; 
+    font-family: "minecraft"; 
     border: none;
     border-radius: 0px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     padding: 9px 16px;
+    margin-right: 20px;
     background-color: #6D9948;
     color: white;
     cursor: pointer;
   }
 
-   @media (max-width: 550px) {
-    margin-bottom: 10px;
-    font-size: 10px;
+   @media (max-width: 750px) {
+    display: none;
   }  
 `;
 
 
 
 export const Hamburguer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-  img {
-    src: url(${ImgHamburguer});
-    width: 50px;
-    height: 50px;
+  @media (min-width: 750px) {
+     display: none;
   }
-
-    font-size: 20px;
-    letter-spacing: 2px;
+   
+  >svg{
     
+      position:fixed;
+      color: white;
+      width: 30px;
+      height: 30px;
+      margin-top: 20px;
+      margin-left: 50px;
+      cursor: pointer;
+
+  }
+ 
 `;

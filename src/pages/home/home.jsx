@@ -1,9 +1,13 @@
-import {Container, Title} from "./styles"
+import {Container, Title,BotaoLogin,Input} from "./styles"
 
 export default function Home(){
    return(
    <Container>
-      <Title>  Home   </Title>
+      <Title></Title>
+      <div>
+      <Input placeholder="Nome do usuário"></Input>
+      <BotaoLogin>Login</BotaoLogin>
+      </div>
       
      </Container>
    );

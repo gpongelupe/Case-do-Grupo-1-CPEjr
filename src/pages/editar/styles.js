@@ -9,7 +9,7 @@ export const Container = styled.div`
   left:0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
   url(${fundoMinecraft});
   background-size: cover;  
 `;
@@ -31,6 +31,10 @@ export const Texto = styled.span`
   text-align: left;
   margin-top: 15px;
   margin-right: 10px;
+
+  @media (max-width: 700px) {
+   font-size: 10px;
+  }
 `;
 export const MeuBotao = styled.button`
   background: #6D9948;
@@ -64,12 +68,19 @@ export const Input = styled.input`
     text-align: center;
   }
 `;
-export const Organizar = styled.div`
-   
+export const Organizar = styled.div`   
 `;
 export const Item = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 85px;
   margin-left: 70px;
+`;
+export const DivAranha = styled.div`
+display: flex;
+  width: 100%;
+  height: 430px;
+  justify-content: right;
+  padding-right: 10%;
+  padding-bottom: 5%;
 `;

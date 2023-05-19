@@ -1,5 +1,6 @@
 //import { text } from "stream/consumers";
-import {Container, Title, Texto, MeuBotao, Input, Organizar, Item} from "./styles"
+import {Container, Title, Texto, MeuBotao, Input, Organizar, Item, DivAranha} from "./styles"
+import aranha from "../../assets/editar/aranha.png"
 
 export default function Editar(){
    return(
@@ -19,7 +20,11 @@ export default function Editar(){
          </Input><MeuBotao><Texto>Editar! </Texto></MeuBotao>
          </Item>
          </Organizar>
+   <DivAranha>
 
+   <img src={aranha} />
+      
+      </DivAranha>
      </Container>
    );
 }

@@ -10,7 +10,7 @@ import{
     FaRegFileAlt,
     FaRegCalendarAlt,
     FaChartBar
-} from 'react-icons/Fa'
+} from 'react-icons/fa'
 
 /*  import SidebarItem from '../SidebarItem'  */
 

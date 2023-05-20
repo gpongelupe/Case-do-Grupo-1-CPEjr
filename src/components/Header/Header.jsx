@@ -8,7 +8,7 @@ import React from 'react';
 import {useState} from 'react';
 import { Link } from "react-router-dom";
 import Sidebar from "../Sidebar";
-import { FaBars } from 'react-icons/Fa'; 
+import { FaBars } from 'react-icons/fa'; 
 
 
 
@@ -25,7 +25,7 @@ const showSidebar = () => setSidebar(!sidebar)
                     </Item>                        
                 <Links>
                     <Link to="/">Home</Link>
-                    <Link to="/cadstro">Cadastro</Link>
+                    <Link to="/cadastro">Cadastro</Link>
                     <Link to="/login">Login</Link>
                     <Link to="/editar">Editar</Link>
                 </Links>   

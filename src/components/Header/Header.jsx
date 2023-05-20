@@ -2,8 +2,8 @@ import { Botao, H1 } from "./Styles"
 import { Item } from "./Styles";
 import { Links } from "./Styles";
 import { Hamburguer } from "./Styles";
-import ImageHeader from "../../assets/editar/headerimage.png"
-import ImgHamburguer from "../../assets/editar/menuhamburguer.png"
+import ImageHeader from "../../assets/header/headerimage.png"
+import ImgHamburguer from "../../assets/header/menuhamburguer.png"
 import React from 'react';
 import {useState} from 'react';
 import { Link } from "react-router-dom";

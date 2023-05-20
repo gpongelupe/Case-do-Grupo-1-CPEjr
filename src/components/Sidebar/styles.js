@@ -6,7 +6,7 @@ position: fixed;
 height: 100%;
 top: 0px;
 right: 0px;
-width: 300px;
+width: 200px;
 right: ${props => props.sidebar ? '0' : '-100%'};
 animation: showSidebar .4s;
 
@@ -15,8 +15,8 @@ animation: showSidebar .4s;
     color: white;
     width: 30px;
     height: 30px;
-    margin-top: 32px;
-    margin-left: 32px;
+    margin-top: 40px;
+    margin-left: 10px;
     cursor: pointer;
 }
 

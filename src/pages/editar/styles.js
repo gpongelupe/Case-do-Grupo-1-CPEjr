@@ -15,6 +15,7 @@ export const Container = styled.div`
 `;
 export const Title = styled.p`
   font-family: "minecraft";
+  align-items: center;
   color: #FFFFFF;
   text-align: center;
   margin-bottom: 170px;
@@ -23,18 +24,48 @@ export const Title = styled.p`
   font-weight: 500;
   line-height: 65px;
   letter-spacing: 0.075em;
+
+  @media (max-width: 820px) {
+   width: 100%;
+   height: 0;
+   font-size: 30px;
+   text-align: center;
+  }
 `;
 export const Texto = styled.span` 
   font-size: 30px;
   font-family: "minecraft";
   color: #FFFFFF;
-  text-align: left;
+  text-align: center;
   margin-top: 15px;
   margin-right: 10px;
 
-  @media (max-width: 700px) {
-   font-size: 10px;
-  }
+  @media (max-width: 820px) {
+  width: 2%;
+  height: 40px;
+  font-family: 'Minecraft';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.075em;
+  text-align: center;
+}
+
+@media (max-width: 290px) {
+  width: 5px;
+  height: 20px;
+  font-family: 'Minecraft';
+  font-style: normal;
+  font-weight: 100;
+  font-size: 11px;
+  line-height: 22px;
+  display: flex;
+  align-items: left;
+  letter-spacing: 0.075em;
+}
 `;
 export const MeuBotao = styled.button`
   background: #6D9948;
@@ -46,6 +77,13 @@ export const MeuBotao = styled.button`
     background-color: #45622D;
     border: none;
   }
+
+  @media (max-width: 820px) {
+    width: 20%;
+    height: 47px;
+   //margin-left: 15%;
+  }
+
 `;
 export const Input = styled.input`
   background: #FFFFFF;
@@ -58,6 +96,7 @@ export const Input = styled.input`
   line-height: 22px;
   letter-spacing: 0.075em;
   color:#6D9948;
+
   ::placeholder {
     color: #BEB8B8;
     font-family: "minecraft";
@@ -67,20 +106,86 @@ export const Input = styled.input`
     letter-spacing: 0.075em;
     text-align: center;
   }
+
+  @media (max-width: 820px) {
+    margin-left: 15%;
+width: 50%;
+height: 47px;
+
+::placeholder {
+    color: #BEB8B8;
+    font-family: "minecraft";
+    font-size: 55%;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.075em;
+    text-align: center;
+  }
+  }
+
+  @media (max-width: 290px) {
+    margin-left: 11%;
+width: 50%;
+height: 47px;
+
+::placeholder {
+    color: #BEB8B8;
+    font-family: "minecraft";
+    font-size: 40%;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.075em;
+    text-align: center;
+  }
+  }
 `;
 export const Organizar = styled.div`   
+  @media (max-width: 700px) {
+    margin-bottom: 10%;
+    margin-top: 40%;
+   
+
+}
 `;
 export const Item = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 85px;
   margin-left: 70px;
+
+  @media (max-width: 820px) {
+    margin-top: 10%;
+    margin-left: 12%
+
+  }
 `;
-export const DivAranha = styled.div`
+export const DivAranha = styled.image`
 display: flex;
   width: 100%;
-  height: 430px;
+  height: 600px;
   justify-content: right;
   padding-right: 10%;
   padding-bottom: 5%;
+
+  @media (max-width: 1290px) {
+    display: flex;
+  width: 100%;
+  height:250px;
+  justify-content: right;
+  padding-right: 10%;
+  padding-bottom: 5%;
+
+  }
+  @media (max-width: 290px) {
+    display: flex;
+  width: 100%;
+  height:180px;
+  justify-content: right;
+  padding-right: 10%;
+  padding-bottom: 10%;
+  margin-top: 10%;
+
+  }
+
+  
 `;

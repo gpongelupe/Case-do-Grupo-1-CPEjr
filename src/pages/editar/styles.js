@@ -40,7 +40,7 @@ export const Texto = styled.span`
   margin-top: 15px;
   margin-right: 10px;
 
-  @media (max-width: 820px) {
+  @media (max-width: 700px) {
   width: 2%;
   height: 40px;
   font-family: 'Minecraft';
@@ -54,6 +54,23 @@ export const Texto = styled.span`
   text-align: center;
 }
 
+
+
+ @media (max-width: 900px) {
+  width: 2%;
+  height: 40px;
+  font-family: 'Minecraft';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.075em;
+  text-align: center;
+  padding-bottom:4%;
+
+} 
 @media (max-width: 290px) {
   width: 5px;
   height: 20px;
@@ -78,12 +95,11 @@ export const MeuBotao = styled.button`
     border: none;
   }
 
-  @media (max-width: 820px) {
+  @media (max-width: 900px) {
     width: 20%;
     height: 47px;
    //margin-left: 15%;
   }
-
 `;
 export const Input = styled.input`
   background: #FFFFFF;
@@ -107,8 +123,8 @@ export const Input = styled.input`
     text-align: center;
   }
 
-  @media (max-width: 820px) {
-    margin-left: 15%;
+  @media (max-width: 900px) {
+     margin-left: 15%; 
 width: 50%;
 height: 47px;
 
@@ -127,7 +143,6 @@ height: 47px;
     margin-left: 11%;
 width: 50%;
 height: 47px;
-
 ::placeholder {
     color: #BEB8B8;
     font-family: "minecraft";
@@ -138,13 +153,12 @@ height: 47px;
     text-align: center;
   }
   }
+
 `;
 export const Organizar = styled.div`   
   @media (max-width: 700px) {
     margin-bottom: 10%;
     margin-top: 40%;
-   
-
 }
 `;
 export const Item = styled.div`
@@ -152,11 +166,9 @@ export const Item = styled.div`
   flex-direction: row;
   margin-top: 85px;
   margin-left: 70px;
-
   @media (max-width: 820px) {
     margin-top: 10%;
     margin-left: 12%
-
   }
 `;
 export const DivAranha = styled.image`
@@ -166,7 +178,6 @@ display: flex;
   justify-content: right;
   padding-right: 10%;
   padding-bottom: 5%;
-
   @media (max-width: 1290px) {
     display: flex;
   width: 100%;
@@ -174,7 +185,6 @@ display: flex;
   justify-content: right;
   padding-right: 10%;
   padding-bottom: 5%;
-
   }
   @media (max-width: 290px) {
     display: flex;
@@ -186,6 +196,4 @@ display: flex;
   margin-top: 10%;
 
   }
-
-  
 `;

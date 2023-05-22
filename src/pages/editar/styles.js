@@ -32,7 +32,7 @@ export const Title = styled.p`
    text-align: center;
   }
 `;
-export const Texto = styled.span` 
+export const Texto = styled.p` 
   font-size: 30px;
   font-family: "minecraft";
   color: #FFFFFF;
@@ -84,11 +84,53 @@ export const Texto = styled.span`
   letter-spacing: 0.075em;
 }
 `;
+export const TextoBotao = styled.p`
+display:flex;
+   font-size: 30px;
+   font-family: "minecraft";
+   color: #FFFFFF;
+   justify-content: center;
+  align-items: center;
+  text-align: center;
+ justify-self: center;
+  @media (max-width: 900px) {
+  width: 2%;
+  height: 40px;
+  font-family: 'Minecraft';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.075em;
+  text-align: center;
+  padding-bottom:4%;
+
+
+} 
+@media (max-width: 290px) {
+  width: 5px;
+  height: 20px;
+  font-family: 'Minecraft';
+  font-style: normal;
+  font-weight: 100;
+  font-size: 11px;
+  line-height: 22px;
+  display: flex;
+  align-items: left;
+  letter-spacing: 0.075em;
+}
+`;
 export const MeuBotao = styled.button`
+display:flex;
   background: #6D9948;
   border: none;
   width:215px;
   height:62px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   &:hover {
     cursor:pointer;
     background-color: #45622D;

@@ -38,7 +38,7 @@ export const Title = styled.p`
 `;
 
 export const Text = styled.p`
-  font-size: 32px;
+  font-size: 25px;
   align-items: center;
   justify-content: space-evenly;
   color: white;

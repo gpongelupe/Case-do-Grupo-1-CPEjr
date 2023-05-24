@@ -21,7 +21,12 @@ export const DivLogin = styled.div`
   align-items: center;
   max-width: 800px;
   width: 100%;
-
+  
+  div{
+      width: 100%;
+      height: auto;
+      margin-bottom: 50px;
+  }
 `;  
 
 export const Title = styled.p`
@@ -29,6 +34,7 @@ export const Title = styled.p`
   align-items: center;
   justify-content: space-evenly;
   color: white;
+  margin-bottom: 50px;
 `;
 
 export const Text = styled.p`
@@ -45,6 +51,8 @@ export const Input = styled.input`
   background-color: #D9D9D9;
   color: black;
   width: 100%;
+  height: 60px;
+  padding-left: 20px;
   
 `;
 
@@ -67,7 +75,8 @@ export const DivRedirecionar = styled.div`
   align-items: center;
   justify-content: space-evenly;
   color: white;
-  gap: 10px;
+  /* gap: 10px; */
+  width: auto;
 `;
 
 export const StyledLink = styled(Link)`

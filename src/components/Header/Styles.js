@@ -17,9 +17,13 @@ export const H1 = styled.header`
 
   @media (max-width: 750px) {
     grid-template-columns: repeat(2, 1fr);
-    gap: 50%;
+    gap: 35%;
   }
 
+  @media (max-width: 500px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15%;
+  }
 
 `;
 
@@ -91,7 +95,6 @@ export const Hamburguer = styled.div`
       width: 30px;
       height: 30px;
       margin-top: 20px;
-      margin-right: 50px;
       cursor: pointer;
 
   }

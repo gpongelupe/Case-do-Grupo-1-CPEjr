@@ -6,7 +6,7 @@ import {
   } from "react-router-dom";
 
   import  AppLayout  from "./layouts/AppLayouts/AppLayout.jsx"; 
-  import { Login, Cadastrar, Home,Editar} from "./Pages/index.js";
+  import { Login, Cadastrar, Home,Editar} from "./pages/index.js";
 
   
   const router = createBrowserRouter(

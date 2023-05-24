@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ImgHamburguer from "../../assets/editar/menuhamburguer.png"
+import ImgHamburguer from "../../assets/header/menuhamburguer.png"
 
 
 
@@ -17,9 +17,13 @@ export const H1 = styled.header`
 
   @media (max-width: 750px) {
     grid-template-columns: repeat(2, 1fr);
-    gap: 50%;
+    gap: 35%;
   }
 
+  @media (max-width: 500px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15%;
+  }
 
 `;
 
@@ -32,6 +36,9 @@ export const Item = styled.div`
   img {
     width: 65px;
     }  
+    @media (max-width: 750px) {
+    margin-left: 20px;
+  }
 `;
 
 export const Links = styled.div`
@@ -80,15 +87,14 @@ export const Hamburguer = styled.div`
   @media (min-width: 750px) {
      display: none;
   }
+ 
    
   >svg{
-    
       position:fixed;
       color: white;
       width: 30px;
       height: 30px;
       margin-top: 20px;
-      margin-left: 50px;
       cursor: pointer;
 
   }

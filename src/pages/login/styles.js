@@ -30,7 +30,7 @@ export const DivLogin = styled.div`
 `;  
 
 export const Title = styled.p`
-  font-size: 128px;
+  font-size: 105px;
   align-items: center;
   justify-content: space-evenly;
   color: white;
@@ -51,14 +51,14 @@ export const Input = styled.input`
   background-color: #D9D9D9;
   color: black;
   width: 100%;
-  height: 60px;
+  height: 70px;
   padding-left: 20px;
   
 `;
 
 export const Botao = styled.button`
-  max-width: 317px;
-  height: 113px;
+  max-width: 300px;
+  height: 110px;
   font-size: 40px;
   align-items: center;
   justify-content: space-evenly;
@@ -71,7 +71,7 @@ export const Botao = styled.button`
 export const DivRedirecionar = styled.div`
   display:flex;
   flex-direction: row;
-  font-size: 32px;
+  font-size: 25px;
   align-items: center;
   justify-content: space-evenly;
   color: white;
@@ -82,7 +82,7 @@ export const DivRedirecionar = styled.div`
 export const StyledLink = styled(Link)`
   all: unset;
   cursor: pointer;
-  font-size: 32px;
+  font-size: 25px;
   align-items: center;
   justify-content: space-evenly;
   color: #6D9948;

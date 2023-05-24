@@ -53,6 +53,11 @@ export const Input = styled.input`
   width: 100%;
   height: 70px;
   padding-left: 20px;
+  @media (max-width: 800px){
+  width: 90%;
+  height: 70px;
+  margin-left: 5%;
+  }
   
 `;
 
@@ -65,6 +70,13 @@ export const Botao = styled.button`
   background-color: #6D9948;
   color: white;
   width: 100%;
+  &:hover {
+    cursor:pointer;
+    background-color: #45622D;
+    border: none;
+  }
+  
+  
   
 `;
 

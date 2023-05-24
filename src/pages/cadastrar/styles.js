@@ -36,8 +36,13 @@ export const Titulo = styled.p`
   margin-left:30%;
   margin-top: 4%;
   margin-bottom: 2%;
-  @media (max-width:700) {
+  @media (max-width:700px) {
     font-size: 30px;
+    margin-left: 20%;
+  }
+  @media (max-width:500px){
+    font-size: 25px;
+    margin-left: 20%;
   }
     
 `;
@@ -59,6 +64,9 @@ export const Input= styled.input`
   width: 80%;
   ::placeholder{
     color: #BEB8B8;
+    @media (max-width:500px){
+      padding-left: 10px;
+    }
   }
 `;
 export const Button = styled.button`
@@ -84,4 +92,5 @@ export const Button = styled.button`
     font-size: 12px;
   }
 `;
+
 

@@ -7,7 +7,7 @@ export default function Cadastrar(){
    return(
 <Container> 
    <DivEsquerda>
-   <img src={imagemCadastro} style={{width: '80%', height: '87%'}}/>
+   <img src={imagemCadastro} style={{width: '80%', height: '80%'}}/>
    <img src={linha} className="Linha" style={{display: 'none'}}/>
    </DivEsquerda>
 

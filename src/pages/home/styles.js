@@ -1,42 +1,124 @@
 import styled from "styled-components";
 import fundoHome from "../../assets/home/fundoHome.png"
+
 export const Title = styled.h1`
-font-size: 50px;
+  font-size: 50px;
 `;
 export const Container = styled.div`
-justify-content: center;
-height: 100%;
-width:100%;
-background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
-url(${fundoHome});
+  justify-content: center;
+  height: 100%;
+  width:100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+  url(${fundoHome});
 `;
+
 export const Carrosel = styled.div` 
-background:  rgba(217, 217, 217, 0.5);
-width: 50%;
-height: 250px;
-margin-top: 5%;
-margin-left:25%;
+  background:  rgba(217, 217, 217, 0.5);
+  width: 50%;
+  height: 250px;
+  margin-top: 5%;
+  margin-left:25%;
+
+  @media (max-width: 820px){
+  width: 50%;
+  height: 200px;
+  }
 `;
+
 export const Tabela = styled.div`
-box-sizing: border-box;
-display:grid;
-grid-template-columns: 1fr 1fr 1fr;
-grid-row-gap: 10px;
-justify-content: center;
-width: 70%;
-height: 37px;
-margin-left: 15%;
-background: #6B6B6B;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display:flex;
+  flex-direction: column;
+  height: auto;
+  width: 70%;
+  margin-left: 15%;
+
+  @media (max-width: 800px){
+  width: 90%;
+  height: 200px;
+  margin-left: 5%;
+  }
+`;
+
+export const Cabecalho = styled.div`
+  box-sizing: border-box;
+  display:grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-row-gap: 10px;
+  justify-content: center;
+  padding-left: 60px;
+  width: 100%;
+  height: 50px;
+  align-content: center;
+  background: #3C3636;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  @media (max-width: 820px){
+    height: 40px;
+  }
+  @media (max-width: 340px){
+   
+   grid-template-columns: 1fr 2fr 2fr;
+  }
+`;
+
+export const LinhaTabela =styled.div`
+  box-sizing: border-box;
+  display:grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-row-gap: 10px;
+  flex-direction: row;
+
+  height: 94px;
+  width: 100%;
+  padding-left: 60px;
+  background: #6B6B6B;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  @media (max-width: 820px){
+    height:70px;
+
+  }
+  @media (max-width: 700px){
+    height:70px;
+    padding-left: 50px;
+  }
+  @media (max-width: 600px){
+    height:70px;
+    padding-left: 30px;
+  }
+  @media (max-width: 500px){
+    height:70px;
+    padding-left: 10px;
+  }
 
 `;
+
+export const MembroTabela =styled.div`
+  display:flex;
+  flex-direction:row;
+  height:70px;
+  margin-top:3%;
+  @media (max-width: 820px){
+    height:60px;
+    margin-top:2%;
+  }
+  @media (max-width: 750px){
+    height:50px;
+  }
+  @media (max-width: 460px){
+    height:40px;
+  }
+  
+`;
+
 export const DivLogin = styled.div`
-display:flex;
-margin-left: 35%;
-//background: #6B6B6B;
-width: 30%;
-height: 100px
+  display:flex;
+  margin-left: 35%;
+  //background: #6B6B6B;
+  width: 30%;
+  height: 100px;
 `;
 
 export const Texto = styled.span` 
@@ -45,12 +127,17 @@ export const Texto = styled.span`
   color: #FFFFFF;
   text-align: center;
   margin-top: 5px;
+
+  @media (max-width: 820px){
+    font-size: 15px;
+  }
+  @media (max-width: 500px){
+    font-size: 13px;
+  }
  
 `;
 export const BotaoLogin = styled.button`
   background: #6D9948;
-  
-  //width:5%;
   width: 75px;
   height:40px;
  
@@ -74,7 +161,12 @@ export const BotaoLogin = styled.button`
     letter-spacing: 0.075em;
     text-align: center;
   }
+  @media (max-width: 820px){
+    width: 60px;
+    height:30px;
+  }
 `;
+
 export const Input = styled.input`
   background: #6B6B6B;
   width:60%;
@@ -91,10 +183,123 @@ export const Input = styled.input`
   ::placeholder {
     color: #BEB8B8;
     font-family: "minecraft";
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     line-height: 22px;
     letter-spacing: 0.075em;
     text-align: center;
   }
+  @media (max-width: 1000px){
+    ::placeholder {
+
+    font-size: 18px;
+    }
+  }
+  @media (max-width: 820px){
+    ::placeholder {
+      font-size: 14px;
+    }
+    width: 100%;
+    height:30px;
+  }
+  
+`;
+
+export const NomeStatus = styled.div`
+  width: 100%;
+
+`;
+
+export const TextoTabela = styled.div`
+  font-size: 15px;
+  font-family: "minecraft";
+  color: #FFFFFF;
+  text-align: left;
+  align-self:center;
+  justify-self:center;
+  margin-top: 5px;
+  margin-left: 5%;
+
+  @media (max-width: 820px){
+    font-size: 12px;
+  }
+  @media (max-width: 460px){
+    font-size: 10px;
+  }
+  @media (max-width: 400px){
+    font-size: 8px;
+  }
+`;
+
+export const TextoStatus = styled.div`
+  font-size: 15px;
+  font-family: "minecraft";
+  color: #FFFFFF;
+  text-align: Left;
+  margin-top: 5px;
+  margin-left: 5%;
+  @media (max-width: 820px){
+    font-size: 12px;
+    font-family: "minecraft";
+  }
+  @media (max-width: 460px){
+    font-size: 8px;
+    font-family: "minecraft";
+  }
+  @media (max-width: 400px){
+    font-size: 8px;
+  }
+`;
+
+export const FundoCronometro = styled.div`
+  display:flex;
+  flex-direction:flex;
+  align-self:center;
+  justify-self:center;
+  //width: 25%;
+  border: 1px solid #000000;
+  width: 60px;
+  height: 32px;
+  align-content: center;//centraliza verticalmente
+  justify-content: center;//centraliza Horizontalmente
+  background: #D9D9D9;  
+
+  @media (max-width: 850px){
+    height: 27px;
+    width: 40px;
+  }
+  @media (max-width: 500px){
+    width: 40px;
+    height: 24px;
+  }
+`;
+
+export const TextoCronometro = styled.div`
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 22.5129px;
+
+  @media (max-width: 1100px){
+    font-size: 20.5129px;
+
+  }
+  @media (max-width: 850px){
+    font-size: 15.5129px;
+    
+  }
+`;
+
+export const Tempo = styled.div`
+  display:flex;
+  align-content:center;
+  justify-content:center;
+  
+`;
+
+export const Cargo = styled.div`
+  display:flex;
+  align-content:center;
+  justify-content:center;
+ 
+
 `;

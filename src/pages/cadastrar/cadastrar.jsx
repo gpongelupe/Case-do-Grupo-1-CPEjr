@@ -2,7 +2,7 @@
 import { Container, DivEsquerda, DivDireita, Titulo, Text, Input, Button} from "./styles";
 import imagemCadastro from "../../assets/cadastro/imagemCadastro.png"
 import linha from "../../assets/cadastro/linha.png"
-
+// testando commit
 export default function Cadastrar(){
    return(
 <Container> 

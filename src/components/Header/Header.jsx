@@ -2,13 +2,13 @@ import { Botao, H1 } from "./Styles"
 import { Item } from "./Styles";
 import { Links } from "./Styles";
 import { Hamburguer } from "./Styles";
-import ImageHeader from "../../assets/editar/headerimage.png"
-import ImgHamburguer from "../../assets/editar/menuhamburguer.png"
+import ImageHeader from "../../assets/header/headerimage.png"
+import ImgHamburguer from "../../assets/header/menuhamburguer.png"
 import React from 'react';
 import {useState} from 'react';
 import { Link } from "react-router-dom";
 import Sidebar from "../Sidebar";
-import { FaBars } from 'react-icons/Fa'; 
+import { FaBars } from 'react-icons/fa'; 
 
 
 
@@ -25,7 +25,7 @@ const showSidebar = () => setSidebar(!sidebar)
                     </Item>                        
                 <Links>
                     <Link to="/">Home</Link>
-                    <Link to="/cadstro">Cadastro</Link>
+                    <Link to="/cadastro">Cadastro</Link>
                     <Link to="/login">Login</Link>
                     <Link to="/editar">Editar</Link>
                 </Links>   

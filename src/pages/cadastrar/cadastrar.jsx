@@ -1,14 +1,13 @@
 
-import { Container, DivEsquerda, DivDireita, Titulo, Text, Input, Button} from "./styles";
+import { Container, DivResponsividade, DivEsquerda, DivDireita, Titulo, Text, Input, Button} from "./styles";
 import imagemCadastro from "../../assets/cadastro/imagemCadastro.png"
-import linha from "../../assets/cadastro/linha.png"
 
 export default function Cadastrar(){
    return(
 <Container> 
+   <DivResponsividade> 
    <DivEsquerda>
    <img src={imagemCadastro} style={{width: '80%', height: '80%'}}/>
-   <img src={linha} className="Linha" style={{display: 'none'}}/>
    </DivEsquerda>
 
    <DivDireita>
@@ -26,7 +25,7 @@ export default function Cadastrar(){
       onClick={() =>alert("Cadastro realizado com sucesso!")}
       >CADASTRAR</Button>
    </DivDireita>
-
+</DivResponsividade>
 </Container>
    );
 }

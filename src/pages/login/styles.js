@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import fundoLogin from "../../assets/login/fundoLogin.jpg";
+import fundoLogin from "../../assets/login/fundologin.jpg";
 import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
@@ -13,6 +13,8 @@ export const Container = styled.div`
   url(${fundoLogin});
   background-size: cover;  
 `;
+
+export const Form = styled.form``;
 
 export const DivLogin = styled.div`
   display:flex;

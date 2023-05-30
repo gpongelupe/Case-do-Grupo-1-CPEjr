@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import fundoMinecraft from "../../assets/editar/fundoMinecraft.jpg"
 
+
 export const Container = styled.div`
 //position:fixed;
   padding:0;

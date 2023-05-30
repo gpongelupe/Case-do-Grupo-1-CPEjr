@@ -2,6 +2,12 @@ import { createGlobalStyle } from "styled-components";
 import minecraft from "../fonts/minecraft.ttf";
 
 const GlobalStyles = createGlobalStyle`
+  @font-face {
+     font-family: 'minecraft';
+     src: url(${minecraft}) format('truetype');
+     font-weight: normal;
+     font-style: normal;
+   };
 * {
   margin: 0;
   padding: 0;
@@ -30,11 +36,5 @@ html{
 }
 `;
 export default GlobalStyles;
-/* @font-face {
-    font-family: 'minecraft';
-    src: url(${minecraft}) format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  };
-` */
+
   

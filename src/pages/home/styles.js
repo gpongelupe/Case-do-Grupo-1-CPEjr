@@ -10,6 +10,8 @@ export const Container = styled.div`
   width:100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
   url(${fundoHome});
+  padding-bottom: 70px;
+  background-size: cover;  
 `;
 
 export const Carrosel = styled.div` 

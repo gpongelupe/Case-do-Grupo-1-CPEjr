@@ -142,7 +142,7 @@ export const BotaoLogin = styled.button`
   background: #6D9948;
   width: 75px;
   height:40px;
- 
+  font-family: "minecraft";
   margin-top: 10%;
   margin-left: 5%;
   border: 1px solid #567838;

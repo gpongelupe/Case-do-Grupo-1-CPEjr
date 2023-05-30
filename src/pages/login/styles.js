@@ -35,6 +35,7 @@ export const Title = styled.p`
   justify-content: space-evenly;
   color: white;
   margin-bottom: 50px;
+  padding-top: 90px;
 `;
 
 export const Text = styled.p`
@@ -70,6 +71,7 @@ export const Botao = styled.button`
   background-color: #6D9948;
   color: white;
   width: 100%;
+  margin-bottom: 20px;
   &:hover {
     cursor:pointer;
     background-color: #45622D;

@@ -99,6 +99,11 @@ export const Button = styled.button`
   font-size: 20px;
   margin-left: 35%;
   border-color: #6D9948;
+  &:hover {
+    cursor:pointer;
+    background-color: #45622D;
+    border: none;
+  }
 
   @media (max-width: 885px){
     font-size: 18px;

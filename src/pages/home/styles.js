@@ -10,6 +10,8 @@ export const Container = styled.div`
   width:100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
   url(${fundoHome});
+  padding-bottom: 70px;
+  background-size: cover;  
 `;
 
 export const Carrosel = styled.div` 
@@ -140,7 +142,7 @@ export const BotaoLogin = styled.button`
   background: #6D9948;
   width: 75px;
   height:40px;
- 
+  font-family: "minecraft";
   margin-top: 10%;
   margin-left: 5%;
   border: 1px solid #567838;

@@ -31,7 +31,6 @@ export default function Cadastrar(){
   
    <DivEsquerda>
    <img src={imagemCadastro} style={{width: '80%', height: '80%'}}/>
-   <img src={linha} className="Linha" style={{display: 'none'}}/>
    </DivEsquerda>
 
    <DivDireita> 
@@ -50,7 +49,7 @@ export default function Cadastrar(){
       >CADASTRAR</Button>
       </Form>
    </DivDireita>
-
+</DivResponsividade>
 </Container>
    );
 }

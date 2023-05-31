@@ -5,28 +5,45 @@ import backGroundCadastro from "../../assets/cadastro/backGroundCadastro.png"
 export const Container = styled.div`
   display: flex;
   flex-direction: row;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(${backGroundCadastro});
   background-size: cover;
   
+ 
+`;
+export const DivResponsividade = styled.div`
+  display:flex;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+   
   @media (max-width: 700px){
-    flex-direction: column-reverse;
+    flex-direction: column-reverse; 
   }
 `;
 export const DivEsquerda = styled.div `
   height: 100vh;
   width: 50%;
-  @media (max-width:700px){
-    width:80%;
+  @media (max-width: 700px){
+    width:100%;
+    height:auto;
+    justify-content: center;
+    @media (max-width:500px){
+      width:100%;
+    justify-content: center;
+    height:90vh;
+    }
   }
 `;
 export const DivDireita = styled.div `
   height: 100vh;
   width: 50%;
   @media (max-width:700px){
-    width:80%;
+    width:100%;
+    height: auto;
+    justify-content:center;
   }
 `;
 export const Titulo = styled.p`
@@ -37,12 +54,12 @@ export const Titulo = styled.p`
   margin-top: 4%;
   margin-bottom: 2%;
   @media (max-width:700px) {
-    font-size: 30px;
     margin-left: 20%;
+    justify-content:center;
   }
   @media (max-width:500px){
     font-size: 25px;
-    margin-left: 20%;
+    margin-left: 10%;
   }
     
 `;
@@ -51,6 +68,9 @@ export const Text = styled.p`
   font-family: minecraft;
   color: #FFFFFF;
   margin-left: 10%;
+  @media (max-wight:700px){
+    font-size:17px;
+  }
 `;
 export const Input= styled.input`
   background: #FFFFFF;
@@ -66,6 +86,7 @@ export const Input= styled.input`
     color: #BEB8B8;
     @media (max-width:500px){
       padding-left: 10px;
+      height:38px;
     }
   }
 `;

@@ -13,14 +13,14 @@ export default function Home(){
    <Container>
 
       {/* <Title></Title> */}
-      <Carrosel>
-         <Carousel></Carousel>
+      <Carrosel> 
+         <Carousel/>
       </Carrosel>
       <DivLogin>
-      <Input placeholder="Nome do membro"></Input>
-      <BotaoLogin onClick ={()=> alert("Login realizado com sucesso!")}>
-         Login
-      </BotaoLogin>
+         <Input placeholder="Nome do membro"></Input>
+         <BotaoLogin onClick ={()=> alert("Login realizado com sucesso!")}>
+            Login
+         </BotaoLogin>
       </DivLogin>
 
      <Tabela>

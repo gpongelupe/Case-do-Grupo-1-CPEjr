@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import Glide from "@glidejs/glide"
+// import Glide from "@glidejs/glide"
 import {Carousel} from "antd"
 
 //configuração do css automatico

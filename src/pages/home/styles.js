@@ -15,14 +15,18 @@ export const Container = styled.div`
   url(${fundoHome});
   padding-bottom: 70px;
   background-size: cover;  
+  align-items: center;
 `;
 
 export const Carrosel = styled.div` 
+/* display: flex; */
   background:  rgba(217, 217, 217, 0.5);
   width: 1000px;
   height: 400px;
   margin-top: 5%;
-  margin-left:25%;
+  /* margin-left:25%; */
+  align-self:center;
+  justify-self: center;
 
   @media (max-width: 820px){
   width: 50%;
@@ -35,7 +39,7 @@ export const Tabela = styled.div`
   flex-direction: column;
   height: auto;
   width: 70%;
-  margin-left: 15%;
+  /* margin-left: 15%; */
 
   @media (max-width: 800px){
   width: 90%;
@@ -120,9 +124,9 @@ export const MembroTabela =styled.div`
 
 export const DivLogin = styled.div`
   display:flex;
-  margin-left: 35%;
+  /* margin-left: 35%; */
   //background: #6B6B6B;
-  width: 100%;
+  width: auto;
   height: 100px;
 `;
 

@@ -11,29 +11,32 @@ export const Container = styled.div`
     url(${backGroundCadastro});
   background-size: cover;
   
- 
 `;
+
+export const Form = styled.form``;
+
 export const DivResponsividade = styled.div`
   display:flex;
   height: 100%;
   width: 100%;
-  background: transparent;
-   
+  background: transparent;  
   @media (max-width: 700px){
     flex-direction: column-reverse; 
   }
 `;
 export const DivEsquerda = styled.div `
-  height: 100vh;
-  width: 50%;
+  padding-top: 200px;
+  height: 100%;
   @media (max-width: 700px){
     width:100%;
     height:auto;
     justify-content: center;
+    display: none;
     @media (max-width:500px){
       width:100%;
     justify-content: center;
     height:90vh;
+    display: none;
     }
   }
 `;
@@ -99,6 +102,11 @@ export const Button = styled.button`
   font-size: 20px;
   margin-left: 35%;
   border-color: #6D9948;
+  &:hover {
+    cursor:pointer;
+    background-color: #45622D;
+    border: none;
+  }
 
   @media (max-width: 885px){
     font-size: 18px;

@@ -1,30 +1,36 @@
 import { useState } from "react";
 import {Container, Form,DivLogin, Title, Text, Input, Botao, DivRedirecionar, StyledLink} from "./styles"
 import api from "../../services/api"
+import useAuthStore from "../../stores/auth";
+import { useNavigate } from "react-router-dom";
 
 export default function Login(){
 
    const [email, setEmail] = useState("");
    const [senha, setSenha] = useState("");
    const [isLoading, setCarregando] = useState(false);
-
+   const token = useAuthStore((state) => state.token); 
+   const setToken = useAuthStore((state) => state.setToken );
+   const navigate = useNavigate();
+   
    const HandleSubmit = async(e) => {
       e.preventDefault();
-   };
-
+   
    try{
       setCarregando(true);
-      const res = api.post("/login", {email, senha});
+      const res = await api.post("/login", {email, senha});
+      const {token} = res.data;   
+      setToken(token)
+      navigate("/")
+
    }catch (erro){
-      alert(erro.message);
+      console.error(erro);
+       alert(erro.response.data.message); 
    }finally{
       setCarregando(false);
    }
+   }
 
-   if (isLoading) return (<Container>
-      <h1>Carregando...</h1>
-   </Container>
-   )
    return(
    <Container>
       <Form onSubmit={HandleSubmit}>
@@ -39,8 +45,12 @@ export default function Login(){
          <Text>senha:</Text>
          <Input placeholder = "Insira sua senha" type="password" id="senha" name="senha" required onChange={(e)=> setSenha(e.target.value)}/>
          </div>
+         {isLoading && 
+         <Text>Carregando...</Text>
+         }
+         {!isLoading && 
          <Botao type="submit">LOGIN</Botao>
-
+         }
          <DivRedirecionar>
             <Text>Não tem uma conta?</Text> 
             <StyledLink to="/Cadastro">

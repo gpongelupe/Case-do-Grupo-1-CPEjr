@@ -47,6 +47,7 @@ export const Text = styled.p`
 `;
 
 export const Input = styled.input`
+  font-family: "minecraft";
   font-size: 25px;
   align-items: center;
   justify-content: space-evenly;
@@ -89,7 +90,8 @@ export const DivRedirecionar = styled.div`
   align-items: center;
   justify-content: space-evenly;
   color: white;
-  /* gap: 10px; */
+  gap: 20px;
+  padding-top: 70px;
   width: auto;
 `;
 

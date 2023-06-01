@@ -33,6 +33,9 @@ export const Title = styled.p`
    text-align: center;
   }
 `;
+
+export const Form = styled.form``;
+
 export const Texto = styled.p` 
   font-size: 30px;
   font-family: "minecraft";

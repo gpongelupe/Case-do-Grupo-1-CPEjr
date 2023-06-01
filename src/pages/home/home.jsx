@@ -3,15 +3,19 @@ import {Container, Title,Carrosel,DivLogin,Input,BotaoLogin,Tabela,
    TextoStatus,FundoCronometro,TextoCronometro,Cargo,Tempo} from "./styles"
 import { useState,useEffect } from "react";
 import FotoPerfil from "../../assets/home/FotoPerfil.png"
+import Carousel from "../../components/Carosel/carosel";
+
 export default function Home(){
 
    const {membros,setMembros}=useState([]);
-  
+
    return(
    <Container>
-      <Title></Title>
-      <Carrosel></Carrosel>
 
+      {/* <Title></Title> */}
+      <Carrosel>
+         <Carousel></Carousel>
+      </Carrosel>
       <DivLogin>
       <Input placeholder="Nome do membro"></Input>
       <BotaoLogin onClick ={()=> alert("Login realizado com sucesso!")}>

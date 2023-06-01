@@ -4,8 +4,11 @@ import fundoHome from "../../assets/home/fundoHome.png"
 export const Title = styled.h1`
   font-size: 50px;
 `;
+
 export const Container = styled.div`
+  display: flex;
   justify-content: center;
+  flex-direction: column;
   height: 100%;
   width:100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
@@ -16,8 +19,8 @@ export const Container = styled.div`
 
 export const Carrosel = styled.div` 
   background:  rgba(217, 217, 217, 0.5);
-  width: 50%;
-  height: 250px;
+  width: 1000px;
+  height: 400px;
   margin-top: 5%;
   margin-left:25%;
 
@@ -119,7 +122,7 @@ export const DivLogin = styled.div`
   display:flex;
   margin-left: 35%;
   //background: #6B6B6B;
-  width: 30%;
+  width: 100%;
   height: 100px;
 `;
 

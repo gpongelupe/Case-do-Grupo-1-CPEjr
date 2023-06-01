@@ -31,7 +31,7 @@ export const Item = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 27px;
   letter-spacing: 2px;
   img {
     width: 65px;
@@ -88,7 +88,7 @@ export const Hamburguer = styled.div`
      display: none;
   }
  
-   
+   padding-left: 60px;
   >svg{
 
       color: white;

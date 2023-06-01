@@ -1,44 +1,49 @@
 import React from "react";
 import {Container, Content} from './styles'
+import { useNavigate } from "react-router-dom";
 import{
     FaTimes,
     FaHome,
     FaRegSun,
     FaUserAlt,
-    FaIdCardAlt,
-    
+    FaIdCardAlt,  
 } from 'react-icons/fa'
-import {SlBan} from 'react-icons/sl'
+import {SidebarItem, SidebarButton} from '../SidebarItem'  
+import useAuthStore from "../../stores/auth";
 
-import SidebarItem from '../SidebarItem'  
-import SideButton from '../SidebarItem'
+   
 
 const Sidebar = ({active}) => {
+    const usuario = useAuthStore((state) => state.usuario);
+    const clearAuth = useAuthStore((state) => state.clearAuth);
+    const navigate = useNavigate();
+    const logout = () => {
+        console.log("teste");
+        clearAuth(); navigate("/login");
+    }
 
     const closeSidebar = ()=>{
         active(false)
     }
 
-    return(
+    return(  
+ 
 
 <Container sidebar={active}>
         <FaTimes onClick={closeSidebar}/>
         <Content> 
-            <SidebarItem Icon={FaHome} Text="Home"to="/"/>
-            <SidebarItem Icon={FaUserAlt} Text="Cadastro"to="/cadastro"/>
-            <SidebarItem Icon={FaIdCardAlt} Text="Login"to="/login"/>
-            <SidebarItem Icon={FaRegSun} Text="Editar"to="/editar"/>
-            <SidebarItem Icon={SlBan}  Text="LogOut" to="/"/>
+            <SidebarItem Icon={FaHome} Text=" Home"to="/"/>
+            <SidebarItem Icon={FaUserAlt} Text=" Cadastro"to="/cadastro"/>
+            <SidebarItem Icon={FaIdCardAlt} Text=" Login"to="/login"/>
+            <SidebarItem Icon={FaRegSun} Text=" Editar"to="/editar"/>
+            {!!usuario &&
+            <SidebarButton/>      
+            }
         </Content>
         </Container>
 
     )
          
+        }
 
-    {/* <Link to="/">Home</Link>
-                    <Link to="/cadastro">Cadastro</Link>
-                    <Link to="/login">Login</Link>
-                    <Link to="/editar">Editar</Link> */}
-    }
-
-    export default Sidebar
+ export default Sidebar

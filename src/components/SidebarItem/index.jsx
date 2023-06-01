@@ -1,12 +1,14 @@
 import React from 'react'
 import { Container } from './styles'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import {Botao} from './styles'
+import useAuthStore from '../../stores/auth'
 
 
-const SidebarItem = ({Icon,Text,to}) =>{
+export const SidebarItem = ({Icon,Text,to}) =>{
 
     return (
-            <Container>
+            <Container >
                  <Link to={to}>
                 <Icon/>
                    {Text}
@@ -16,4 +18,21 @@ const SidebarItem = ({Icon,Text,to}) =>{
 
 }
 
-export default SidebarItem
+export const SidebarButton = () =>{
+
+        const clearAuth = useAuthStore((state) => state.clearAuth);
+        const navigate = useNavigate();
+        const logout = () => {
+            console.log("teste");
+            clearAuth(); navigate("/login");
+        }
+
+    return(
+
+      /*   <Container> */
+            <Botao>
+               <button type ="button" onClick={logout}>LOGOUT</button>
+            </Botao>
+      /*   </Container> */
+    )
+}

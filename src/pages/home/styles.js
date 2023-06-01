@@ -18,6 +18,8 @@ export const Container = styled.div`
   align-items: center;
 `;
 
+export const Form = styled.form``
+
 export const Carrosel = styled.div` 
 /* display: flex; */
   background:  rgba(217, 217, 217, 0.5);
@@ -220,7 +222,7 @@ export const NomeStatus = styled.div`
 `;
 
 export const TextoTabela = styled.div`
-  font-size: 15px;
+  font-size: 20px;
   font-family: "minecraft";
   color: #FFFFFF;
   text-align: left;
@@ -245,7 +247,7 @@ export const TextoStatus = styled.div`
   font-family: "minecraft";
   color: #FFFFFF;
   text-align: Left;
-  margin-top: 5px;
+  margin-top: 15px;
   margin-left: 5%;
   @media (max-width: 820px){
     font-size: 12px;
@@ -267,8 +269,8 @@ export const FundoCronometro = styled.div`
   justify-self:center;
   //width: 25%;
   border: 1px solid #000000;
-  width: 60px;
-  height: 32px;
+  width: auto;
+  height: auto;
   align-content: center;//centraliza verticalmente
   justify-content: center;//centraliza Horizontalmente
   background: #D9D9D9;  

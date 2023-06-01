@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import fundoLogin from "../../assets/login/fundoLogin.jpg";
+import fundoLogin from "../../assets/login/fundologin.jpg";
 import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
@@ -13,6 +13,8 @@ export const Container = styled.div`
   url(${fundoLogin});
   background-size: cover;  
 `;
+
+export const Form = styled.form``;
 
 export const DivLogin = styled.div`
   display:flex;
@@ -46,6 +48,7 @@ export const Text = styled.p`
 `;
 
 export const Input = styled.input`
+  font-family: "minecraft";
   font-size: 25px;
   align-items: center;
   justify-content: space-evenly;
@@ -89,7 +92,8 @@ export const DivRedirecionar = styled.div`
   align-items: center;
   justify-content: space-evenly;
   color: white;
-  /* gap: 10px; */
+  gap: 20px;
+  padding-top: 70px;
   width: auto;
 `;
 

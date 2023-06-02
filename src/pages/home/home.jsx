@@ -1,12 +1,13 @@
-import {Container, Form,Title,Carrosel,DivLogin,Input,BotaoLogin,Tabela,
+import {Container, Form,Carrosel,DivLogin,BotaoLogOut,Input,BotaoLogin,Tabela,
    Cabecalho,Texto,LinhaTabela,MembroTabela,NomeStatus,TextoTabela,
    TextoStatus,FundoCronometro,TextoCronometro,Cargo,Tempo} from "./styles"
 import { useState,useEffect } from "react";
 import FotoPerfil from "../../assets/home/FotoPerfil.png"
-import { ListBoxComponent } from "@syncfusion/ej2-react-dropdowns";
+import IcLogOut from "../../assets/home/logout.png"
 import api from "../../services/api";
 import useAuthStore from "../../stores/auth";
 import Carousel from "../../components/Carosel/carosel";
+import Icon from "@ant-design/icons/lib/components/Icon";
 
 export default function Home(){
 
@@ -15,12 +16,9 @@ export default function Home(){
    const [usuarios,setUsuarios]=useState([]);
    const usuarioAtual = useAuthStore((state) => state.usuario);
    const [sessoes,setSessoes] = useState([]);
-   const [login,setlogin]=useState();
-   const [id,setId]=useState();
    const [carregando,setCarregando] = useState(false);
 
 
-//frase.substr(0,11)
 
    console.log(usuarios);
    const getUsuarios = async() => {
@@ -44,32 +42,27 @@ export default function Home(){
    };
 
 function getHoras(horas) {
-// Obtém o horário atual
 var dataAtual = new Date();
-// Obtém o horário do backend (exemplo: "2023-05-31T10:30:00")
 var horarioBackend = new Date(horas);
-// Calcula a diferença em milissegundos
 var diferenca = dataAtual.getTime() - horarioBackend.getTime();
-// Converte a diferença em segundos
-var diferencaEmMinutos = diferenca / 60000;
-
-// Exibe a diferença em segundos
-console.log("Diferença em segundos: " + diferencaEmMinutos);
-return Math.round(diferencaEmMinutos);
+var diferencaEmSegundos = diferenca / 1000;
+return Math.round(diferencaEmSegundos);
    }
 
    useEffect(()=>{
       getUsuarios()
       getSessoes()
-      getHoras()
    }, [])
 
 
      const HandleSubmit = async(e) => {
+/*      console.log(usuarioAtual._id); */
+
       e.preventDefault();
       try{
-         getId();
-         const res = await api.post("/sessoes",{id_usuario:usuarioAtual._id}); 
+         const res = await api.post("/sessoes",{id_usuario:usuarioAtual._id});
+          alert("Sessão criada!");
+         location.reload();
          setCarregando(true);
       }catch (erro){
          console.error(erro);
@@ -78,15 +71,30 @@ return Math.round(diferencaEmMinutos);
          setCarregando(false);
       }
    }
-   setInterval(getHoras, 60000);
+
+   const Logout = async(e) => {
+      console.log(usuarioAtual._id);
+ 
+       e.preventDefault();
+       try{
+          const res = await api.delete("/sessoes/"+usuarioAtual._id); 
+          location.reload();
+          setCarregando(true);
+       }catch (erro){
+          console.error(erro);
+           alert(erro.response.data.message); 
+       }finally{
+          setCarregando(false);
+       }
+    }
+
    return(
       
    <Container>
 
-      {/* <Title></Title> */}
-      <Carrosel> 
+       <Carrosel> 
          <Carousel/>
-      </Carrosel>
+      </Carrosel> 
       <DivLogin>
       <Form onSubmit={HandleSubmit}>
        <Input placeholder="Nome do membro" onChange={(e)=> setlogin(e.target.value)}></Input>     
@@ -121,80 +129,16 @@ return Math.round(diferencaEmMinutos);
             <Tempo> 
                <FundoCronometro>
                   <TextoCronometro>
-                        {getHoras(secao.createdAt)+"minutos"}
+                        {Math.round((getHoras(secao.createdAt)/60))+":"+(((getHoras(secao.createdAt)%60)*60)/100).toFixed(0)}
                   </TextoCronometro> 
                </FundoCronometro>
+               <BotaoLogOut onClick={Logout}/>
+
             </Tempo> 
+            
         </LinhaTabela>  
  ))}
-        {/* <LinhaTabela>
-            <MembroTabela>
-               <img src={FotoPerfil}/>
-               <NomeStatus>
-                  <TextoTabela>Julia Moraes Lima</TextoTabela>
-                  <TextoStatus>Trabalhando enquanto eles dormem...</TextoStatus>
-               </NomeStatus>
-            </MembroTabela>
-
-            <Cargo>
-               <TextoTabela>Dev Líder</TextoTabela>
-            </Cargo>
-
-            <Tempo> 
-               <FundoCronometro>
-                  <TextoCronometro>
-                     09:49
-                  </TextoCronometro> 
-               </FundoCronometro>
-            </Tempo>
-            
-        </LinhaTabela>
-
-        <LinhaTabela>
-            <MembroTabela>
-               <img src={FotoPerfil}/>
-               <NomeStatus>
-                  <TextoTabela>Julia Moraes Lima</TextoTabela>
-                  <TextoStatus>Trabalhando enquanto eles dormem...</TextoStatus>
-               </NomeStatus>
-            </MembroTabela>
-
-            <Cargo>
-               <TextoTabela>Dev Líder</TextoTabela>
-            </Cargo>
-
-            <Tempo> 
-               <FundoCronometro>
-                  <TextoCronometro>
-                     09:49
-                  </TextoCronometro> 
-               </FundoCronometro>
-            </Tempo>
-            
-        </LinhaTabela>
-
-        <LinhaTabela>
-            <MembroTabela>
-               <img src={FotoPerfil}/>
-               <NomeStatus>
-                  <TextoTabela>Julia Moraes Lima</TextoTabela>
-                  <TextoStatus>Trabalhando enquanto eles dormem...</TextoStatus>
-               </NomeStatus>
-            </MembroTabela>
-
-            <Cargo>
-               <TextoTabela>Dev Líder</TextoTabela>
-            </Cargo>
-
-            <Tempo> 
-               <FundoCronometro>
-                  <TextoCronometro>
-                     09:49
-                  </TextoCronometro> 
-               </FundoCronometro>
-            </Tempo>
-            
-        </LinhaTabela> */}
+        
       </Tabela>
   
      </Container>

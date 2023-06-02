@@ -40,7 +40,7 @@ export default function Cadastrar(){
    <Form onSubmit={HandleSubmit}>
       <Titulo>Cadastre-se!</Titulo> 
       <Text>Nome:</Text>
-      <Input placeholder={'ex. João da Silva'} type="nome" id="nome" name="nome" required onChange={(e)=> setNome(e.target.value)}/>
+      <Input placeholder={'ex. Amanda Fernades'} type="nome" id="nome" name="nome" required onChange={(e)=> setNome(e.target.value)}/>
       <Text>Email:</Text>
       <Input placeholder={' email@email.com'} type="email" id="email" name="email" required onChange={(e)=> setEmail(e.target.value)}/>
       <Text>Cargo:</Text>

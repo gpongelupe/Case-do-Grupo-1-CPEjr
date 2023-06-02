@@ -32,12 +32,16 @@ const Sidebar = ({active}) => {
 <Container sidebar={active}>
         <FaTimes onClick={closeSidebar}/>
         <Content> 
-            <SidebarItem Icon={FaHome} Text=" Home"to="/"/>
+            
             <SidebarItem Icon={FaUserAlt} Text=" Cadastro"to="/cadastro"/>
             <SidebarItem Icon={FaIdCardAlt} Text=" Login"to="/login"/>
-            <SidebarItem Icon={FaRegSun} Text=" Editar"to="/editar"/>
+            
             {!!usuario &&
-            <SidebarButton/>      
+            <>
+            <SidebarItem Icon={FaHome} Text=" Home"to="/"/>
+            <SidebarItem Icon={FaRegSun} Text=" Editar"to="/editar"/>
+            <SidebarButton/>  
+            </>    
             }
         </Content>
         </Container>

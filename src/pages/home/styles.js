@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import fundoHome from "../../assets/home/fundoHome.png"
+import logout from "../../assets/home/logout.png"
 
 export const Title = styled.h1`
   font-size: 50px;
@@ -22,17 +23,17 @@ export const Form = styled.form``
 
 export const Carrosel = styled.div` 
 /* display: flex; */
-  background:  rgba(217, 217, 217, 0.5);
+
   width: 1000px;
-  height: 400px;
+  height: auto;
   margin-top: 5%;
   /* margin-left:25%; */
   align-self:center;
   justify-self: center;
 
-  @media (max-width: 820px){
-  width: 50%;
-  height: 200px;
+  @media (max-width: 1000px){
+  width: 800px;
+  height: auto;
   }
 `;
 
@@ -267,8 +268,8 @@ export const FundoCronometro = styled.div`
   flex-direction:flex;
   align-self:center;
   justify-self:center;
-  //width: 25%;
   border: 1px solid #000000;
+  padding: 4px;
   width: auto;
   height: auto;
   align-content: center;//centraliza verticalmente
@@ -299,7 +300,20 @@ export const TextoCronometro = styled.div`
     
   }
 `;
+export const BotaoLogOut = styled.button`
+  width: 30px;
+  height:30px;
+  background-image: url(${logout});
+  background-size: cover;
+  margin-top: 19%;
+  margin-left: 5%;
 
+  &:hover {
+    cursor:pointer;
+    border: none; 
+    text-align: center;
+    }
+`;
 export const Tempo = styled.div`
   display:flex;
   align-content:center;

@@ -25,15 +25,15 @@ export const DivResponsividade = styled.div`
   }
 `;
 export const DivEsquerda = styled.div `
-  padding-top: 200px;
+  padding-top: 200px; 
+  width:100%;
   height: 100%;
   @media (max-width: 700px){
-    width:100%;
     height:auto;
     justify-content: center;
     display: none;
     @media (max-width:500px){
-      width:100%;
+     width:100%;
     justify-content: center;
     height:90vh;
     display: none;
@@ -41,10 +41,12 @@ export const DivEsquerda = styled.div `
   }
 `;
 export const DivDireita = styled.div `
-  height: 100vh;
-  width: 50%;
-  @media (max-width:700px){
-    width:100%;
+ height: 100%;
+  width: 100%;
+  padding-top: 150px;
+  @media (max-width:1000px){
+    width:100%; 
+    padding-top: 25%;
     height: auto;
     justify-content:center;
   }

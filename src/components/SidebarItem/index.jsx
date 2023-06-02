@@ -29,10 +29,8 @@ export const SidebarButton = () =>{
 
     return(
 
-      /*   <Container> */
             <Botao>
                <button type ="button" onClick={logout}>LOGOUT</button>
             </Botao>
-      /*   </Container> */
     )
 }

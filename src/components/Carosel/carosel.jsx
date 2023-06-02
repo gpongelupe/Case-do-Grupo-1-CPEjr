@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 // import Glide from "@glidejs/glide"
 import {Carousel} from "antd"
 import Foto1 from "./ima2.webp"
-import Foto2 from "./mine.jpg"
+import Foto2 from "./mine2.jpg"
 import Foto3 from "./noticias.jpg"
 //configuração do css automatico
 import "@glidejs/glide/dist/css/glide.core.min.css";
@@ -19,7 +19,7 @@ const config = {
 const Carrosel = () => {
     
     const onChange = (currentSlide) => {
-        console.log(currentSlide);
+/*         console.log(currentSlide); */
       };
     const contentStyle = {
 /*         marginLeft: '10%', */
@@ -36,13 +36,10 @@ const Carrosel = () => {
             <img style={contentStyle} src={Foto3}/>
           </div>
           <div>
-            <img style={contentStyle} src= {Foto2}/> 
+            <img style={{contentStyle,height: '500px',paddingLeft: '130px' }} src= {Foto2}/> 
           </div>
           <div>
             <img style={contentStyle}src= {Foto1}/>
-          </div>
-          <div>
-            <h3 style={contentStyle}>4</h3>
           </div>
         </Carousel>
       );

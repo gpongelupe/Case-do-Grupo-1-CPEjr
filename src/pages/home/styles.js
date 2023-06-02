@@ -305,7 +305,7 @@ export const BotaoLogOut = styled.button`
   height:30px;
   background-image: url(${logout});
   background-size: cover;
-  margin-top: 19%;
+  justify-content: center;
   margin-left: 5%;
 
   &:hover {
@@ -317,6 +317,7 @@ export const BotaoLogOut = styled.button`
 export const Tempo = styled.div`
   display:flex;
   align-content:center;
+  align-items: center;
   justify-content:center;
   
 `;

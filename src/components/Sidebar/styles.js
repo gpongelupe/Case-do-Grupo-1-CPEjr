@@ -7,6 +7,7 @@ height: 100%;
 top: 0px;
 right: 0px;
 width: 200px;
+z-index: 10;
 right: ${props => props.sidebar ? '0' : '-100%'};
 animation: showSidebar .4s;
 

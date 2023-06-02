@@ -16,6 +16,7 @@ export default function Home(){
    const [usuarios,setUsuarios]=useState([]);
    const usuarioAtual = useAuthStore((state) => state.usuario);
    const [sessoes,setSessoes] = useState([]);
+   const [login, setLogin] =  useState();
    const [carregando,setCarregando] = useState(false);
 
 
@@ -42,11 +43,13 @@ export default function Home(){
    };
 
 function getHoras(horas) {
+
 var dataAtual = new Date();
 var horarioBackend = new Date(horas);
 var diferenca = dataAtual.getTime() - horarioBackend.getTime();
 var diferencaEmSegundos = diferenca / 1000;
 return Math.round(diferencaEmSegundos);
+
    }
 
    useEffect(()=>{
@@ -60,6 +63,10 @@ return Math.round(diferencaEmSegundos);
 
       e.preventDefault();
       try{
+      if(usuarioAtual.nome!==login){
+         return alert("Nome de usuario incorreto para iniciar sessão")
+      }
+
          const res = await api.post("/sessoes",{id_usuario:usuarioAtual._id});
           alert("Sessão criada!");
          location.reload();
@@ -72,12 +79,21 @@ return Math.round(diferencaEmSegundos);
       }
    }
 
+   function getID(e){
+      const buttonId = e.target.id;
+   }
+
    const Logout = async(e) => {
-      console.log(usuarioAtual._id);
- 
-       e.preventDefault();
-       try{
-          const res = await api.delete("/sessoes/"+usuarioAtual._id); 
+
+      const buttonId = e.target.id;
+      console.log(buttonId);
+       /* e.preventDefault(); */
+      try{
+         if(buttonId!==usuarioAtual._id){
+            return alert("Operação não autorizada")
+         }
+          const res = await api.delete("/sessoes/"+buttonId); 
+          alert("Bom descanço!");
           location.reload();
           setCarregando(true);
        }catch (erro){
@@ -97,7 +113,7 @@ return Math.round(diferencaEmSegundos);
       </Carrosel> 
       <DivLogin>
       <Form onSubmit={HandleSubmit}>
-       <Input placeholder="Nome do membro" onChange={(e)=> setlogin(e.target.value)}></Input>     
+       <Input placeholder="Nome do membro" onChange={(e)=> setLogin(e.target.value)}></Input>     
       <BotaoLogin type="submit">
          Login
       </BotaoLogin>
@@ -132,7 +148,8 @@ return Math.round(diferencaEmSegundos);
                         {Math.round((getHoras(secao.createdAt)/60))+":"+(((getHoras(secao.createdAt)%60)*60)/100).toFixed(0)}
                   </TextoCronometro> 
                </FundoCronometro>
-               <BotaoLogOut onClick={Logout}/>
+               
+               <BotaoLogOut onClick={(e)=>Logout(e)} id={secao.id_usuario._id}/>
 
             </Tempo> 
             

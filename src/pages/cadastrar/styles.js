@@ -43,10 +43,10 @@ export const DivEsquerda = styled.div `
 export const DivDireita = styled.div `
  height: 100%;
   width: 100%;
-  padding-top: 150px;
+  padding-top: 120px;
   @media (max-width:1000px){
     width:100%; 
-    padding-top: 25%;
+    padding-top: 20%;
     height: auto;
     justify-content:center;
   }

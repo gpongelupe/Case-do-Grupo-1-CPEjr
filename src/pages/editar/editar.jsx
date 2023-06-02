@@ -16,16 +16,16 @@ export default function Editar(){
       e.preventDefault();
     
       try{   
-         const res = await api.put("/usuarios/"+usuario._id, {nome:nome,status:status,cargo:cargo});
-         alert("Alterações feitas!");
-         location.reload();
+         console.log(usuario._id)
+         const res = await api.put("/usuarios/"+usuario._id, {nome,cargo,status}); 
       }catch (erro){
          console.error(erro);
          alert(erro.message);
        }finally{
-         
+
       } 
    };
+
 
    return(
    <Container>
@@ -33,15 +33,15 @@ export default function Editar(){
       <Organizar>
          <Form onSubmit={HandleSubmit}>
    <Item>
-      <Texto>Nome:</Texto> <Input placeholder={usuario.nome} type="nome" id="nome" name="nome" required onChange={(e)=> setNome(e.target.value)}>
+      <Texto>Nome:</Texto> <Input placeholder={usuario.nome} type="nome" id="nome" name="nome"  onChange={(e)=> setNome(e.target.value)}>
       </Input><MeuBotao type="submit"><TextoBotao>Editar! </TextoBotao></MeuBotao>
    </Item>
    <Item>
-      <Texto>Cargo:</Texto> <Input placeholder={usuario.cargo} type="cargo" id="cargo" name="cargo" required onChange={(e)=> setCargo(e.target.value)}>
+      <Texto>Cargo:</Texto> <Input placeholder={usuario.cargo} type="cargo" id="cargo" name="cargo"  onChange={(e)=> setCargo(e.target.value)}>
       </Input><MeuBotao type="submit"><TextoBotao>Editar! </TextoBotao></MeuBotao>
    </Item>
    <Item>
-      <Texto>Status:</Texto> <Input placeholder={usuario.status} type="status" id="status" name="status" required  onChange={(e)=> setStatus(e.target.value)}>
+      <Texto>Status:</Texto> <Input placeholder={usuario.status} type="status" id="status" name="status"  onChange={(e)=> setStatus(e.target.value)}>
       </Input><MeuBotao type="submit"><TextoBotao>Editar! </TextoBotao></MeuBotao>
    </Item>
          </Form>
